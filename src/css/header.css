@@ -1,0 +1,136 @@
+/* =========================
+   HEADER
+========================= */
+
+.header {
+  position: fixed;
+  top: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 999;
+  width: 100%;
+  height: 48px;
+  background: #141316;
+  /* чуть глубже фон */
+  border-bottom: 1px solid rgba(168, 85, 247, 0.2);
+  box-shadow: 0 2px 15px rgba(168, 85, 247, 0.15);
+}
+
+.header-container {
+  padding: 12px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* --- КНОПКА МЕНЮ --- */
+.menu-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+border: none;
+  width: 28px;
+  height: 28px;
+  margin-left: auto;
+  background-color: transparent;
+  color: #e2e2e8;
+  transition: all 0.3s ease;
+}
+
+
+.navigation-list {
+  display: none;
+}
+
+/* =========================
+   MOBILE MODAL MENU
+========================= */
+
+.modal {
+  display: none;
+  background: #1a1c1d;
+  border-bottom: 1px solid #a855f7;
+  border-radius: 0 0 40px 40px;
+  padding: 64px 24px;
+  width: 100%;
+  height: auto;
+  z-index: 1000;
+  position: fixed;
+  top: 47px;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0 15px 40px rgba(168, 85, 247, 0.2);
+  transition: all 0.3s ease;
+}
+
+.menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  align-items: center;
+}
+
+.menu-item {
+  padding: 8px 0px;
+  width: 220px;
+  height: 35px;
+  text-align: center;
+  color: #dcdce5;
+  transition: all 0.3s ease-in-out;
+}
+
+.menu-item:hover,
+.menu-item:focus,
+.menu-item.active {
+  color: #ffffff;
+  border-bottom: 1px solid #a855f7;
+  text-shadow: 0 0 10px rgba(168, 85, 247, 0.6);
+}
+
+/* =========================
+   DESKTOP NAVIGATION
+========================= */
+
+@media screen and (min-width: 1440px) {
+
+  .header-container {
+    padding: 8px 64px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .menu-button {
+    display: none;
+  }
+
+  .navigation-list {
+    display: flex;
+    justify-content: center;
+    gap: 138px;
+  }
+
+  .navigation-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    color: #dcdce5;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .navigation-item:hover {
+    font-weight: 600;
+    color: #ffffff;
+    text-shadow: 0 0 12px rgba(168, 85, 247, 0.6);
+  }
+
+  .navigation-item:focus,
+  .navigation-item.active {
+    border-bottom: 1px solid #a855f7;
+    font-weight: 600;
+    color: #ffffff;
+  }
+
+}

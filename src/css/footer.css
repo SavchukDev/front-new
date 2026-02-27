@@ -1,0 +1,86 @@
+/* =========================
+   CONTACT SECTION
+========================= */
+
+.contact-section {
+background: linear-gradient(to top, #3b0764 0%, #0d0e10 80%);
+    position: relative;
+    border-top: 1px solid rgba(168, 85, 247, 0.15);
+}
+
+.contact-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.contact-subtitle {
+    font-size: 18px;
+    color: #9ca3af;
+    max-width: 500px;
+}
+
+
+/* =========================
+   TELEGRAM BUTTON (AMETHYST NEON)
+========================= */
+
+.tg-link-premium {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: transparent;
+    border: 2px solid #a855f7;
+    padding: 20px 50px;
+    color: #c084fc;
+    text-decoration: none;
+    font-family: "Goldman", sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    transition: all 0.4s ease;
+    box-shadow: 0 0 20px rgba(168, 85, 247, 0.15);
+}
+
+.tg-link-premium:hover {
+    background: #a855f7;
+    color: #ffffff;
+    box-shadow: 0 0 40px rgba(168, 85, 247, 0.5);
+    transform: scale(1.05);
+}
+
+.tg-icon {
+    width: 30px;
+    height: 30px;
+    filter: drop-shadow(0 0 8px rgba(168, 85, 247, 0.5));
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer-bottom {
+    margin-top: 100px;
+    opacity: 0.6;
+}
+
+.footer-bottom .line {
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg,
+            transparent,
+            #a855f7,
+            transparent);
+    margin-bottom: 30px;
+}
+
+.footer-note {
+    font-size: 12px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #9ca3af;
+}

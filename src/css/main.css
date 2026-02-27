@@ -1,0 +1,843 @@
+/* =========================
+   HERO SECTION
+========================= */
+
+/* --- ГЛАВНЫЙ ЗАГОЛОВОК --- */
+.home-title {
+    font-family: "Michroma", sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+    text-transform: uppercase;
+    text-align: center;
+color: #f5f3ff;
+    margin-top: 60px;
+    margin-bottom: 40px;
+}
+.dark{
+     background: linear-gradient(180deg, #f5f3ff 0%, #a855f7 50%, #6b21a8 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+/* --- ГЛАВНАЯ КНОПКА --- */
+.home-link {
+    margin-top: 40px;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 1px 2px 10px 0 rgba(168, 85, 247, 0.3);
+    background: #1a1c1d;
+    border: 1px solid #a855f7;
+    border-radius: 16px;
+    width: 280px;
+    height: 48px;
+    font-family: "Goldman", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.3;
+    color: #e2e2e8;
+    transition: all 0.3s ease-in-out;
+}
+
+.home-link:hover,
+.home-link:focus {
+    color: #ffffff;
+    background: #a855f7;
+    box-shadow: 0 0 20px rgba(168, 85, 247, 0.6);
+}
+
+/* --- СЕКЦИЯ --- */
+.home-section {
+    position: relative;
+    height: 80vh;
+    overflow: hidden;
+    background: #1a1c1d;
+}
+
+#particleCanvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 10;
+}
+
+/* --- ЛОГО И ЛЕВИТАЦИЯ --- */
+.hero-image-wrapper {
+    margin-bottom: 20px;
+    filter: drop-shadow(0 0 30px rgba(168, 85, 247, 0.5));
+}
+
+.hero-main-img {
+    width: 200px;
+    height: auto;
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+/* --- УГЛОВЫЕ ЛОГО --- */
+.corner-logo {
+    position: absolute;
+    width: 100px;
+    z-index: 5;
+    filter: drop-shadow(0 0 15px rgba(168, 85, 247, 0.4));
+    opacity: 0.6;
+    transition: all 0.5s ease;
+}
+
+.corner-logo img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    border: 1px solid rgba(168, 85, 247, 0.3);
+}
+
+.t-left {
+    top: 20%;
+    left: 30px;
+}
+
+.b-right {
+    bottom: 20%;
+    right: 30px;
+}
+
+.corner-logo:hover {
+    opacity: 1;
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 25px rgba(168, 85, 247, 0.7));
+}
+
+@media (max-width: 768px) {
+
+
+    .home-section {
+        height: auto;
+        min-height: 80vh;
+
+        padding: 80px 0;
+
+    }
+    .corner-logo {
+        width: 45px;
+        opacity: 0.3;
+
+    }
+
+    .t-left {
+        top: 20%;
+        left: 15px;
+    }
+
+    .b-right {
+        bottom: 15px;
+        right: 15px;
+    }
+
+
+    .home-link {
+        width: 240px;
+        height: 44px;
+        margin-top: 30px;
+    }
+
+
+
+}
+
+/* --- СИЯНИЕ КУРСОРА --- */
+.cursor-glow {
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(168, 85, 247, 0.1) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 2;
+    transform: translate(-50%, -50%);
+}
+
+
+/* =========================
+   ABOUT SECTION
+========================= */
+
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    align-items: center;
+}
+
+.about-main-text {
+    max-width: 800px;
+    font-size: 20px;
+    line-height: 1.8;
+    color: #d0d0d4;
+}
+
+.gold-text {
+    color: #c084fc;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.highlight-red {
+    color: #a855f7;
+    font-weight: bold;
+    border-bottom: 1px solid #a855f7;
+}
+
+/* --- КАРТОЧКИ ПРЕИМУЩЕСТВ --- */
+.about-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    width: 100%;
+}
+
+.feature-card {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(168, 85, 247, 0.1);
+    padding: 40px 30px;
+    border-radius: 2px;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.feature-card:hover {
+    background: rgba(168, 85, 247, 0.05);
+    border-color: #a855f7;
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.feature-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #a855f7;
+    transition: width 0.4s ease;
+}
+
+.feature-card:hover::before {
+    width: 100%;
+}
+
+.card-icon {
+    font-size: 40px;
+    margin-bottom: 20px;
+    filter: drop-shadow(0 0 10px rgba(168, 85, 247, 0.3));
+}
+
+.feature-card h3 {
+    font-family: "Goldman", sans-serif;
+    color: #fff;
+    margin-bottom: 15px;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.feature-card p {
+    font-size: 14px;
+    color: #8a8a8e;
+    line-height: 1.6;
+}
+
+
+/* =========================
+   PRODUCT SECTION
+========================= */
+
+.product-grid {
+  display: flex;
+  flex-wrap: wrap;       /* Позволяет карточкам переноситься на новую строку */
+  justify-content: center; /* ГЛАВНОЕ: Центрирует карточки в ряду */
+  gap: 30px;
+  padding: 40px 0;
+  max-width: 1200px;     /* Ограничиваем ширину, чтобы в ряд влезало ровно 3 */
+  margin: 0 auto;        /* Центрируем сам контейнер с сеткой */
+}
+
+.product-card {
+    background: #212325;
+    border: 1px solid #333;
+    padding: 30px;
+    border-radius: 4px;
+    position: relative;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    flex: 0 1 360px;
+    min-width: 300px;
+    min-height: 600px;
+}
+
+
+.product-card:hover {
+    transform: translateY(-5px);
+    border-color: #a855f7;
+}
+
+.product-card h3 {
+    color: #fff;
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.sub-h {
+    font-size: 14px;
+    color: #a855f7;
+}
+
+.pricing {
+    background: rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.price-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.price-row strong {
+    color: #c084fc;
+}
+
+.card-features {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    font-size: 14px;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+.card-features li::before {
+    content: "»";
+    color: #a855f7;
+    margin-right: 10px;
+}
+
+.buy-btn {
+    background: #a855f7;
+    color: #ffffff;
+    padding: 12px;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+.buy-btn:hover {
+    background: #9333ea;
+    letter-spacing: 1px;
+}
+
+/* --- БЕЙДЖ --- */
+.badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #581c87;
+    color: #fff;
+    font-size: 10px;
+    padding: 3px 8px;
+}
+
+/* Адаптивность для планшетов */
+@media (max-width: 1024px) {
+  .product-grid {
+      /* 2 карточки в ряд */
+      grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 650px) {
+  .product-grid {
+      /* 1 карточка в ряд (на всю ширину) */
+      grid-template-columns: 1fr;
+  }
+}
+
+.product-card {
+  background: #212325;
+  border: 1px solid #333;
+  padding: 30px;
+  border-radius: 4px;
+  position: relative;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  /* Гарантируем, что карточки будут одной высоты в ряду */
+  height: 100%;
+}
+/* =========================
+   1440+ ADAPTIVE
+========================= */
+
+@media only screen and (min-width: 1440px) {
+    .home-title {
+        font-size: 100px;
+        margin-bottom: 50px;
+        margin-top: 100px;
+    }
+
+    .hero-subtitle {
+        font-size: 24px;
+    }
+}
+
+.warranty-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    margin-bottom: 60px;
+    margin-top: 40px;
+}
+
+.warranty-card {
+    background: rgba(168, 85, 247, 0.03);
+    border: 1px solid rgba(168, 85, 247, 0.15);
+    padding: 40px;
+    text-align: left;
+    position: relative;
+    transition: 0.4s ease;
+}
+
+.warranty-card:hover {
+    border-color: #a855f7;
+    background: rgba(168, 85, 247, 0.07);
+    box-shadow: 0 0 30px rgba(168, 85, 247, 0.1);
+}
+
+.warranty-card h3 {
+    font-family: "Orbitron", sans-serif;
+    color: #f5f3ff;
+    font-size: 20px;
+    margin-bottom: 25px;
+    letter-spacing: 1px;
+}
+
+.warranty-list {
+    list-style: none;
+    padding: 0;
+}
+
+.warranty-list li {
+    margin-bottom: 15px;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #d0d0d4;
+    padding-left: 25px;
+    position: relative;
+}
+
+/* Фиолетовые маркеры */
+.warranty-list li::before {
+    content: "▹";
+    position: absolute;
+    left: 0;
+    color: #a855f7;
+    font-weight: bold;
+}
+
+/* --- КНОПКИ --- */
+.cta-group {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+/* Стиль кнопки "Тест" (Вторичная) */
+.btn-secondary {
+    font-family: "Goldman", sans-serif;
+    text-decoration: none;
+    color: #a855f7;
+    border: 1px solid #a855f7;
+    padding: 15px 30px;
+    border-radius: 4px;
+    transition: 0.3s;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.btn-secondary:hover {
+    background: rgba(168, 85, 247, 0.1);
+    box-shadow: 0 0 15px rgba(168, 85, 247, 0.3);
+}
+
+/* Стиль кнопки "Консультация" (Главная неоновая) */
+.btn-primary-neon {
+    font-family: "Goldman", sans-serif;
+    text-decoration: none;
+    background: #a855f7;
+    color: #fff;
+    padding: 15px 35px;
+    border-radius: 4px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 14px;
+    transition: 0.3s;
+    box-shadow: 0 0 20px rgba(168, 85, 247, 0.4);
+}
+
+.btn-primary-neon:hover {
+    background: #9333ea;
+    box-shadow: 0 0 40px rgba(168, 85, 247, 0.7);
+    transform: translateY(-3px);
+}
+
+@media (max-width: 768px) {
+    .cta-group {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn-secondary,
+    .btn-primary-neon {
+        width: 100%;
+        max-width: 300px;
+        text-align: center;
+    }
+}
+/* 2. Секция продуктов теперь контейнер для фона */
+.product-section {
+    position: relative;
+    overflow: hidden;
+    /* Чтобы фон не вылезал за границы секции */
+    padding: 100px 0;
+    background: transparent;
+}
+
+/* 3. Переделываем Overlay под локальное использование */
+.product-section .bg-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    /* Уходит под карточки */
+    pointer-events: none;
+
+}
+
+/* 4. Плавающие иконки для остальных секций */
+.section-decor {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.float-icon {
+    position: absolute;
+    opacity: 0.06;
+    /* Чуть заметнее на чистом фоне */
+    stroke: var(--purple);
+    filter: drop-shadow(0 0 10px var(--purple));
+}
+/* Статичные карточки с мягким ховером */
+.product-card,
+.feature-card,
+.warranty-card {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--purple);
+    box-shadow: 0 10px 30px rgba(168, 85, 247, 0.15);
+}
+.float-icon {
+    position: absolute;
+    width: 60px;
+    /* Размер иконок */
+    height: 60px;
+    fill: none;
+    stroke: var(--purple);
+    stroke-width: 1.2;
+    opacity: 0.06;
+    filter: drop-shadow(0 0 10px var(--purple));
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* Специфические размеры для некоторых иконок */
+.float-icon.ads {
+    width: 120px;
+    height: 120px;
+    opacity: 0.03;
+}
+
+.float-icon.gear {
+    width: 100px;
+    height: 100px;
+}
+/* Внутренние элементы фона в секции товаров */
+.product-section .bg-grid {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(var(--purple) 0.8px, transparent 0.8px);
+    background-size: 30px 30px;
+    opacity: 0.1;
+}
+
+.product-section .bg-blobs {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    filter: blur(80px);
+}
+
+.product-section .blob {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: var(--purple);
+    border-radius: 50%;
+    opacity: 0.08;
+}
+
+.product-section .blob:nth-child(1) {
+    top: -10%;
+    left: -10%;
+}
+
+.product-section .blob:nth-child(2) {
+    bottom: -10%;
+    right: -10%;
+    background: var(--deep-purple);
+}
+.float-icon {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    fill: none;
+
+    /* ИЗМЕНЕНИЯ ЗДЕСЬ: */
+    stroke: #ffffff;
+    /* Цвет линии теперь чисто белый */
+    stroke-width: 1.2;
+    opacity: 0.15;
+    /* Сделали ярче (было 0.06). Попробуйте 0.2, если нужно еще ярче */
+
+    /* Белое неоновое свечение вместо фиолетового */
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.7));
+
+    z-index: 0;
+    pointer-events: none;
+}
+/* Розогреваем родительскую секцию */
+.product-section {
+    position: relative;
+    /* Чтобы фон не улетел */
+    overflow: hidden;
+    /* Чтобы пятна не вылезали за границы */
+    background-color: #0d0e10;
+    /* Базовый темный цвет */
+    z-index: 1;
+}
+
+/* Контейнер для всех слоев фона */
+.bg-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    /* Уходим за карточки */
+    pointer-events: none;
+}
+
+/* Слой 1: Точечная сетка (Google стиль) */
+.bg-grid {
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(rgba(168, 85, 247, 0.15) 1px, transparent 1px);
+    background-size: 30px 30px;
+}
+
+/* Слой 2: Светящиеся аметистовые пятна */
+.bg-blobs {
+    position: absolute;
+    inset: 0;
+    filter: blur(80px);
+    opacity: 0.4;
+}
+
+.blob {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: #a855f7;
+    border-radius: 50%;
+}
+
+.blob:nth-child(1) {
+    top: -100px;
+    left: -100px;
+    opacity: 0.3;
+}
+
+.blob:nth-child(2) {
+    bottom: -100px;
+    right: -100px;
+    background: #6b21a8;
+    opacity: 0.3;
+}
+
+/* Слой 3: Иконки (если используешь паттерн) */
+.bg-icons {
+    position: absolute;
+    inset: 0;
+    opacity: 0.05;
+    background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 10h10v10H10zM50 50h5v5h-5z' fill='%23ffffff' opacity='0.2'/%3E%3C/svg%3E");
+}
+/* 1. Делаем саму секцию прозрачной ширмой */
+.product-section {
+    position: relative;
+    background: transparent !important;
+    /* Убираем заливку самой секции */
+    z-index: 1;
+}
+
+/* 2. Настраиваем слои внутри */
+.bg-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    /* Фон уходит за контент */
+    background-color: #0d0e10;
+    /* Вот здесь задаем цвет ПОД сеткой */
+    pointer-events: none;
+}
+
+/* 3. Контент должен быть ПОВЕРХ всего */
+.product-section .container {
+    position: relative;
+    z-index: 2;
+}
+/* --- СЛОЙ С ИКОНКАМИ В СЕКЦИИ ПРОДУКТОВ --- */
+.product-section .bg-icons {
+    position: absolute;
+    inset: 0;
+    opacity: 0.12;
+    /* Регулируйте яркость иконок здесь */
+    pointer-events: none;
+    z-index: -1;
+
+    /* SVG Паттерн: График, Монеты, Рекламный мегафон, Документ, Google Ads */
+    background-image: url("data:image/svg+xml,%3Csvg width='180' height='180' viewBox='0 0 180 180' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg stroke='white' stroke-width='1' stroke-linecap='round' stroke-linejoin='round'%3E%3C!-- График роста --%3E%3Cpath d='M20 50v-20h20M20 50l15-15 10 10 20-20'/%3E%3C!-- Монета --%3E%3Ccircle cx='140' cy='30' r='10'/%3E%3Cpath d='M140 24v12M134 30h12'/%3E%3C!-- Рекламный мегафон --%3E%3Cpath d='M30 130l15-10v20l-15-10zm15-10h10a5 5 0 015 5v0a5 5 0 01-5 5H45'/%3E%3C!-- Документ --%3E%3Cpath d='M130 120h20v30h-20zM134 128h12M134 136h12M134 144h6'/%3E%3C!-- Google Ads (Треугольник) --%3E%3Cpath d='M90 80l-20 35h40L90 80z' opacity='0.5'/%3E%3C/g%3E%3C/svg%3E");
+
+    background-size: 220px 220px;
+    /* Плотность расположения иконок */
+    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.4));
+}
+
+/* Настройка слоев в секции, чтобы всё было видно */
+.product-section {
+    position: relative;
+    background-color: transparent !important;
+    overflow: hidden;
+}
+
+.product-section .bg-overlay {
+    position: absolute;
+    inset: 0;
+    background-color: #0d0e10;
+    /* Базовый черный */
+    z-index: -2;
+}
+
+/* Сетка (делаем ее белой и очень тонкой) */
+.product-section .bg-grid {
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+    background-size: 40px 40px;
+    z-index: -1;
+}
+/* Позиционирование иконок именно в секции About */
+.about-section .doc {
+    top: 15%;
+    left: 7%;
+    width: 70px;
+    height: 70px;
+    transform: rotate(-15deg);
+}
+
+.about-section .gear {
+    bottom: 10%;
+    right: 5%;
+    width: 110px;
+    height: 110px;
+    opacity: 0.1;
+    /* Чуть приглушим крупную шестеренку */
+}
+.home-section {
+    /* Добавляем градиент перед url картинки */
+    background-image: linear-gradient(rgba(13, 14, 16, 0.7),
+            rgba(13, 14, 16, 0.7)), url("/img/hero.jpg");
+
+    background-repeat: no-repeat;
+    background-position: top 20% center;
+    background-size: cover;
+}
+@media only screen and (min-width: 1440px) {
+.home-section {
+        /* Добавляем градиент перед url картинки */
+        background-image: linear-gradient(rgba(13, 14, 16, 0.7),
+                rgba(13, 14, 16, 0.7)), url("/img/hero.jpg");
+
+        background-repeat: no-repeat;
+        background-position: top 20% center;
+        background-size: cover;
+    }
+}

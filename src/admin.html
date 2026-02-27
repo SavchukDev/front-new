@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/jpg" href="/favicon.jpg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+
+  <body>
+    <main class="container">
+      <div style="display:flex; gap:12px; align-items:center; justify-content:space-between;">
+        <h1>Товары</h1>
+        <button id="logoutBtn" type="button">Выйти</button>
+      </div>
+
+      <form id="createForm" style="display:grid; gap:12px; margin:16px 0; max-width: 900px;">
+        <div style="display:grid; grid-template-columns: 1fr; gap:12px;">
+          <input name="name" placeholder="Название товара (заголовок)" required />
+        </div>
+
+        <div style="display:grid; grid-template-columns: 180px 1fr 1fr; gap:12px;">
+          <select name="variant">
+            <option value="default">default</option>
+            <option value="premium">premium</option>
+            <option value="autoreg">autoreg</option>
+          </select>
+
+          <input name="badge" placeholder="Badge (TOP SALES / PREMIUM) — можно пусто" />
+          <input name="geos" placeholder="Гео (например: 🌍 CZ, BG, US, RO...)" />
+        </div>
+
+        <div style="display:grid; grid-template-columns: 1fr 1fr; gap:12px;">
+          <input name="button_text" placeholder="Текст кнопки" value="Купить" />
+          <input name="button_link" placeholder="Ссылка кнопки" value="https://t.me/tmlfarm" />
+        </div>
+
+        <div style="display:grid; grid-template-columns: 1fr 1fr; gap:12px;">
+          <textarea
+            name="prices"
+            rows="6"
+            placeholder="Цены (каждая строка: label|value)
+7 дней фарма|25$
+14 дней фарма|30$"
+          ></textarea>
+
+          <textarea
+            name="features"
+            rows="6"
+            placeholder="Фичи (каждая строка — отдельный пункт)
+Docs (физ/юр лица)
+Верификация Google Ads
+Резервная почта + 2FA"
+          ></textarea>
+        </div>
+
+        <button type="submit">Добавить</button>
+        <p id="formMsg" style="margin:0; color:#b00;"></p>
+      </form>
+
+      <hr />
+
+      <ul id="productsList"></ul>
+    </main>
+
+    <script type="module" src="./js/admin/admin.js"></script>
+  </body>
+</html>

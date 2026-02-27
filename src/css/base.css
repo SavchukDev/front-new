@@ -1,0 +1,33 @@
+:root {
+    --bg-color: #0d0e10;
+    --purple: #a855f7;       /* Яркий фиолетовый из лого */
+    --deep-purple: #3b0764;  /* Темный фиолетовый для облаков */
+    --silver: #f5f3ff;
+}
+body {
+  background: #0d0e10;
+  font-family: "Goldman", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: center;
+  /* Добавим легкий оттенок лаванды в текст, чтобы он не был "грязным" */
+  color: #e2e2e8;
+}
+
+h2 {
+  font-family: "Michroma", sans-serif;
+  font-weight: 700;
+  font-size: 32px;
+  text-transform: uppercase;
+  text-align: center;
+  /* Градиент теперь повторяет переливы на букве H и треугольнике из лого */
+  background: linear-gradient(180deg, #f5f3ff 0%, #a855f7 50%, #6b21a8 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  /* Заменяем красный контур на глубокий темно-фиолетовый */
+  -webkit-text-stroke: 0.4px #2e1065;
+  /* Добавим легкое свечение, как на логотипе */
+  filter: drop-shadow(0 0 10px rgba(168, 85, 247, 0.3));
+}
