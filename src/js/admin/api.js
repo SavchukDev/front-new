@@ -1,4 +1,4 @@
-const BASE = 'https://back-dofamine.onrender.com/api';
+const BASE = 'https://new-back-lp1h.onrender.com/api';
 const BASE_PATH = import.meta.env.BASE_URL;
 
 export function getToken() {
